@@ -1,38 +1,94 @@
-.App {
+/* General App Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Fredoka', sans-serif;
+  color: #3d2e2e;
+  overflow-x: hidden;
+  background-color: #fef6f0;
+  background-image: url('/assets/potion-room-bg.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+
+.clear-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  background-color: #ffe1a8;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shelves {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 5rem;
+  margin-top: 2rem;
+}
+
+.shelf-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3.8rem; /* controls vertical spacing between ingredients */
+  margin-top: 1.5rem;
+}
+
+
+.ingredient {
+  width: 150px;
+  height: 150px;
+  cursor: grab;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.cauldron-area {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.cauldron {
+  width: 560px;
+  height: 500px;
+  background-image: url('/assets/cauldron.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.side-panels {
+  display: none;
+}
+
+@keyframes bubble {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
