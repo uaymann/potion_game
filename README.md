@@ -41,6 +41,8 @@ npm run build
 ```
 This creates an optimized production build in the ```build``` folder.
 
+---
+
 ## V1 Features
 
 - Cute and cozy witchy aesthetic
