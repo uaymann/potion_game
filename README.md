@@ -21,7 +21,7 @@ Follow these steps to run the project locally:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/uaymann/potion_game.git
-cd cozy-cauldron-game
+cd potion_game
 ```
 
 ### 2. Install Dependencies
