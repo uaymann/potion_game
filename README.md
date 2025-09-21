@@ -53,5 +53,6 @@ This creates an optimized production build in the ```build``` folder.
 
 - This project was built for learning and practice purposes.
 - This is my first React game project, so expect updates and improvements over time.
+- AI was used to create visuals and assets for this game.
 
 
